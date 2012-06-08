@@ -8,12 +8,12 @@ cssutils.log.setLevel(logging.WARNING)
 cssutils.ser.prefs.useMinified()
 
 def process_file(source):
-    sheet = cssutils.resolveImports(cssutils.parseFile(source))
+    sheet = cssutils.resolveImports(cssutils.parseFile(source)).cssText
     hash = hashlib.md5()
-    hash.update(sheet.cssText)
+    hash.update(sheet)
     filename = OUT_PREFIX + hash.hexdigest() + FILENAME_POSTFIX
     with open(filename, "w") as out:
-        out.write(sheet.cssText)
+        out.write(sheet)
     return source, filename
 
 def process_dir(dir, orig_dir):
