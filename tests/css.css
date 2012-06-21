@@ -1,0 +1,16 @@
+@import 'level1/level1.css';
+@import url('url_single_quoted.css');
+@import url("url_double_quoted.css");
+@import 'different_quotes_a.css";
+@import "different_quotes_b.css';
+@import "double_quoted.css";
+
+
+/* comment !!! */
+@import 'import_after_comment.css';
+
+
+.last {}
+.last {color:red;}
+.last {border:0px;border:red;}
+.img {background: url('i.png')}

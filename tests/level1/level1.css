@@ -1,0 +1,8 @@
+@charset "utf8";
+@import 'level2/level2.css';
+/*
+@import 'commented_import.css';
+i see you;
+*/
+
+.img {background: url('level1.png')}

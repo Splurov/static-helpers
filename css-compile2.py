@@ -1,14 +1,11 @@
 import sys, os, hashlib, logging, xml.dom.minidom
-import cssutils
+import css_single
 
 FILENAME_POSTFIX = ".css"
 OUT_PREFIX = '_'
 
-cssutils.log.setLevel(logging.FATAL)
-cssutils.ser.prefs.useMinified()
-
 def process_file(source):
-    sheet = cssutils.resolveImports(cssutils.parseFile(source)).cssText
+    sheet = css_single.parse(source)
     hash = hashlib.md5()
     hash.update(sheet)
     filename = OUT_PREFIX + hash.hexdigest() + FILENAME_POSTFIX

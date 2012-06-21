@@ -1,0 +1,28 @@
+div .import_after_comment { color: red;border: 0;background: red;}
+
+.foo, .bar {
+    z-index: 1000
+}
+
+#id bar {
+    text-align: right;
+}
+
+.valid-vendors {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+
+.invalid-vendors {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+}
+
+
+.HH-boo {
+    border: 0;
+}
